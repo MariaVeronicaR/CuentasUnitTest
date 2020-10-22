@@ -63,7 +63,8 @@ public class AppTest
     	);
     	
     	cuenta.credit(600);
-    	cuenta.credit(400);
+	cuenta.debit(20);
+	cuenta.credit(400);
 		
 		float comisionTotal= 0; 
 		
@@ -73,8 +74,8 @@ public class AppTest
 			
 		}
 		
-		assertThat(cuenta.getBalance(),is(1190));
-		assertThat(comisionTotal,is(10f));
+		assertThat(cuenta.getBalance(),is(1170));
+		assertThat(comisionTotal,is(9.8f));
 		
 	}
 	
